@@ -2,21 +2,20 @@
 
 <suite verbose="1" name="Carina Demo Tests - API sample tests" skipfailedinvocationcounts="false" junit="false" parallel="tests" data-provider-thread-count="50" annotations="JDK">
 
+	<listeners>
+		<listener class-name="com.qaprosoft.zafira.listener.ZafiraListener"/>
+	</listeners>
+
 	<parameter name="suiteOwner" value="qpsdemo"/>
 	<parameter name="zafira_project" value="UNKNOWN"/>
 	<parameter name="jenkinsJobCreation" value="true"/>
 	<parameter name="jenkinsJobName" value="API-Demo-Test"/>
 	<parameter name="jenkinsJobType" value="api"/>
 	<parameter name="jenkinsEnvironments" value="DEMO"/>
-	<parameter name="jenkinsEmail" value="demo@qaprosoft.com"/>
-	
-	<parameter name="jenkinsGitHubProject" value="https://github.com/qaprosoft/carina"/>
-	<parameter name="jenkinsGitHubHookTrigger" value="true"/>
-	<parameter name="jenkinsQuietPeriod" value="3"/>
-	<parameter name="jenkinsDefaultRetryCount" value="5"/>
-	
-<!-- 	<parameter name="jenkinsRegressionPipeline" value="Carina-Demo-Regression-Pipeline"/> -->
-	<parameter name="jenkinsPipelineEnvironments" value="DEMO"/>
+	<parameter name="jenkinsSlackChannels" value="slack-test"/>
+
+	<parameter name="jenkinsRegressionPipeline" value="Carina-Demo-Regression-Pipeline"/>
+	<parameter name="jenkinsPipelineEnvironments" value="DEMO"/>	
 <!-- 	<parameter name="jenkinsPipelineLocales" value="fr_FR,en_US,es_ES,it_IT,de_DE,pt_PT,zh_CN:zh-rCN,ja_JP,ko_KR"/> -->
 	<parameter name="jenkinsJobExecutionMode" value="continue"/>
 <!-- 	<parameter name="jenkinsJobExecutionOrder" value="ordered"/> -->
