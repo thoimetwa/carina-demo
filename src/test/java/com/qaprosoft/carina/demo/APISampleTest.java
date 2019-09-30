@@ -38,6 +38,7 @@ public class APISampleTest extends AbstractTest {
     
     @Test(description = "JIRA#DEMO-0001")
     @MethodOwner(owner = "qpsdemo")
+    @TestRailCases(testCasesId = "97687848484")
     public void testCreateUser() throws Exception {
         setCases("4555,54545");
         PostUserMethod api = new PostUserMethod();
