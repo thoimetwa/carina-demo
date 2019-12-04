@@ -7,7 +7,7 @@
 	</listeners>
 
 	<parameter name="suiteOwner" value="qpsdemoSuite"/>
-	<parameter name="zafira_project" value="UNKNOWN"/>
+	<parameter name="zafira_project" value="Liza"/>
 	<parameter name="jenkinsJobCreation" value="true"/>
 	<parameter name="jenkinsJobName" value="Tags-Demo-Test"/>
 	<parameter name="jenkinsJobType" value="api"/>
