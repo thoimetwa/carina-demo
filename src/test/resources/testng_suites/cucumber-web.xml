@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="1" name="Carina Demo Tests - Web tests (Cucumber)" annotations="JDK">
     <parameter name="suiteOwner" value="qpsdemo"/>
-    <parameter name="zafira_project" value="UNKNOWN"/>
+    <parameter name="zafira_project" value="Liza"/>
 
     <test verbose="1"
           name="GSM Arena News - Web tests by cucumber">
