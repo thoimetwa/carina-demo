@@ -1,5 +1,3 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite verbose="1" name="Carina Demo - Test Custom Jobs Params" skipfailedinvocationCounts="false" junit="false" parallel="tests" annotations="JDK">
 
 	<listeners>
