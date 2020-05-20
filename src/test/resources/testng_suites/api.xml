@@ -5,7 +5,7 @@
 	<parameter name="zafira_project" value="UNKNOWN"/>
 	<parameter name="jenkinsJobName" value="API-Demo-Test"/>
 	<parameter name="jenkinsJobType" value="api"/>
-	<parameter name="disableConcurrentBuild" value="true"/>
+	<parameter name="jenkinsConcurrentBuild" value="false"/>
 
 	<parameter name="jenkinsEnvironments" value="DEMO"/>
 	<parameter name="jenkinsSlackChannels" value="slack-test"/>
