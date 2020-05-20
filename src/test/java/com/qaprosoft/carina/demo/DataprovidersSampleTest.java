@@ -17,6 +17,7 @@ package com.qaprosoft.carina.demo;
 
 import java.util.HashMap;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -25,6 +26,7 @@ import org.testng.annotations.Test;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.core.foundation.dataprovider.annotations.XlsDataSourceParameters;
 import com.qaprosoft.carina.core.foundation.report.testrail.TestRailCases;
+import com.qaprosoft.carina.core.foundation.utils.R;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
@@ -36,6 +38,7 @@ import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
  * @author qpsdemo
  */
 public class DataprovidersSampleTest extends AbstractTest {
+    Logger LOGGER = Logger.getLogger(DataprovidersSampleTest.class);
     /**
      * Parametrization using external XLS/XLSX: every row in spreadsheet provides tests arguments set for 1 test.
      * <p>
@@ -53,6 +56,7 @@ public class DataprovidersSampleTest extends AbstractTest {
     @TestRailCases(testCasesId = "1")
     @XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "Calculator", dsUid = "TUID", dsArgs = "a,b,c", testRailColumn = "a")
     public void testSumOperation(String a, String b, String c) {
+        LOGGER.info("stringArg: " + R.CONFIG.get("stringArg"));
         int actual = Integer.valueOf(a) + Integer.valueOf(b);
         int expected = Integer.valueOf(c);
         Assert.assertEquals(actual, expected, "Invalid sum result!");
